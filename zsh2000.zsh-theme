@@ -74,7 +74,7 @@ prompt_git() {
 }
 
 prompt_dir() {
-  prompt_segment blue black '%~'
+  prompt_segment blue black '%2d'
 }
 
 # Status:
