@@ -56,11 +56,14 @@ prompt_user_hostname() {
 }
 
 prompt_git() {
-  local ref dirty
+  local ref dirty behind
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
     dirty=$(parse_git_dirty)
+    behind=$(git_prompt_behind)
     ref=$(git symbolic-ref HEAD 2> /dev/null)
-    if [[ -n $dirty ]]; then
+    if [[ -n $behind ]]; then
+      prompt_segment red black
+    elif [[ -n $dirty ]]; then
       prompt_segment magenta black
     else
       prompt_segment green black
