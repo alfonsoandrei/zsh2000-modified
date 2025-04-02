@@ -1,4 +1,4 @@
-### ZSH2000-node
+### zsh2000-node
 
 Forked from [consolemaverick](https://github.com/consolemaverick/zsh2000)
 
@@ -12,12 +12,12 @@ git clone  git@github.com:alfonsoandrei/zsh2000-node.git ~/.zsh2000-node
 
 2. Create symbolic link
 ```sh
-ln -s ~/.zsh2000-node/zsh2000.zsh-theme ~/.oh-my-zsh/themes/zsh2000-node.zsh-theme
+ ln -s ~/.zsh2000-node/zsh2000-node.zsh-theme ~/.oh-my-zsh/themes/zsh2000-node.zsh-theme
 ```
 
 3. Update your `.zshrc` file
 ```sh
-nano ~/.zshrc
+vim ~/.zshrc
 ```
 
 Find the line that sets the `ZSH_THEME`
