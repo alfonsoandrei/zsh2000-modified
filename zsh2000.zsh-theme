@@ -98,11 +98,13 @@ prompt_time() {
   prompt_segment_right white black '%D{%H:%M:%S} '
 }
 
-prompt_rvm() {
-  local rvm_prompt
-  rvm_prompt=`rvm-prompt`
-  if [ "$rvm_prompt" != "" ]; then
-    prompt_segment_right "240" white "$rvm_prompt "
+prompt_node() {
+  if type node > /dev/null 2>&1; then
+    local node_version
+    node_version=$(node -v)
+    if [ "$node_version" != "" ]; then
+      prompt_segment_right "240" white "⬢ ${node_version#v} "
+    fi
   fi
 }
 
@@ -174,10 +176,8 @@ function git_time_since_commit() {
 }
 
 build_rprompt() {
-  if [ "$ZSH_2000_DISABLE_RVM" != 'true' ];then
-    prompt_rvm
-  fi
   prompt_time
+  prompt_node
 }
 
 
