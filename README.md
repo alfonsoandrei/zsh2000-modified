@@ -1,6 +1,6 @@
 ### zsh2000-node
 
-Forked from [consolemaverick](https://github.com/consolemaverick/zsh2000)
+![preview](preview.png)
 
 #### Installation
 
@@ -34,3 +34,5 @@ source ~/.zshrc
 - Left prompt text color changed to black
 - Prompt directory path will only go 2 deep
 - Displays current Node version
+
+Forked from [consolemaverick](https://github.com/consolemaverick/zsh2000)
